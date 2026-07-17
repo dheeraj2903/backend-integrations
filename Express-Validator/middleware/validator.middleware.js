@@ -8,19 +8,19 @@ function validate(req, res, next) {
     next();
 }
 
-// const registerValidationRules = [
-//   body("username")
-//     // .optional()
-//     .isString().withMessage("Username must be a string")
-//     .isLength({ min: 3 }).withMessage("Username must be at least 3 characters long"),
+const registerValidationRules = [
+  body("username")
+    // .optional()
+    .isString().withMessage("Username must be a string")
+    .isLength({ min: 3 }).withMessage("Username must be at least 3 characters long"),
 
-//   body("email").isEmail().withMessage("Invalid email format"),
+  body("email").isEmail().withMessage("Invalid email format"),
 
-//   body("password")
-//     .isLength({ min: 6 })
-//     .withMessage("Password must be at least 6 characters long"),
-//     validate
-// ];
+  body("password")
+    .isLength({ min: 6 })
+    .withMessage("Password must be at least 6 characters long"),
+    validate
+];
 
 
 module.exports = {
