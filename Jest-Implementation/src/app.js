@@ -3,18 +3,18 @@ const express = require('express');
 
 const app = express();
 
-// app.get("/", (req, res) => {
-//     res.status(200).json({ message: "Hello world"})
-// })
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "Hello world"})
+})
 
 
-// app.post('/api/auth/register', (req, res) => {
-//     const {username, email, password} = req.body;
+app.post('/api/auth/register', (req, res) => {
+    const {username, email, password} = req.body;
 
-//     res.status(201).json({
-//         message: "User registered successfully",
-//         user: { username, email }
-//     })
-// })
+    res.status(201).json({
+        message: "User registered successfully",
+        user: { username, email }
+    })
+})
 
 module.exports = app;
